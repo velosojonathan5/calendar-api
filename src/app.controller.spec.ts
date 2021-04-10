@@ -19,4 +19,12 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
   });
+
+  describe('sum', () => {
+    it('Deve somar x + y', () => {
+      const result = appController.sum(5, 5);
+
+      expect(result).toBe(10);
+    });
+  });
 });
