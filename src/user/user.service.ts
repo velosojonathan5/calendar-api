@@ -46,6 +46,10 @@ export class UserService {
     return this.userModel.findAll({ where });
   }
 
+  findOneByEmail(email: string) {
+    return this.userModel.findOne({ where: { email } });
+  }
+
   deleteUser(id: string) {
     return this.userModel.destroy({ where: { id } });
   }

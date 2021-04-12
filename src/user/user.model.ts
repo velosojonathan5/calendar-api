@@ -10,6 +10,9 @@ export class User extends Model {
   email: string;
 
   @Column
+  password: string;
+
+  @Column
   phone: string;
 
   @HasMany(() => Task)

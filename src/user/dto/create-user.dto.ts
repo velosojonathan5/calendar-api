@@ -7,6 +7,9 @@ export class CreateUserDto {
   @IsEmail(undefined, { message: 'O email deve ter o formato correto' })
   email: string;
 
+  @IsString()
+  password: string;
+
   @IsNumberString()
   @Length(11, 11)
   phone: string;
